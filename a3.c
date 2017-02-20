@@ -5,7 +5,38 @@
  * Due: February 21, 2017                      Started: February 19, 2017
  * Credit: 10 points.
  *
- * 
+ * Problem: Write a program to help understand underlying data
+ * representation. This is done in 4 different methods. First being
+ * discovering whether or not the data is store using big-endian or
+ * little-endian in the computer. Second and Third are determining
+ * how many bytes a integral data-type holds. The Fourth and final
+ * objective was to discover if the data is stored in 2's complement
+ * or in 1's complement
+ *
+ * These for method and processes are used to uncover how this certain
+ * computer does data representation.
+ *
+ * Output Format:
+ * Big endian architecture:       (Yes/No)
+ * Size of integer in bytes:      #
+ * (Alternate method size):       #
+ * 2's complement representation  (Yes/No)
+ *
+ * Solution: We first call the method that determines whether this computer
+ * uses big-endian or little-endian. This will return a 1 or 0. based
+ * off of that we output Yes if 1 and No if 0. We determine if it is big or
+ * little-endian by checking the first byte of the number inserted in the array.
+ *
+ * We then check both integer size methods. These return the number of bytes
+ * used by the C compiler to represent integers. Each functions return the same
+ * thing but find it via a different implimentation. We take that number and
+ * print it out along with correct wording.
+ *
+ * The final thing we do is call the 2's complement method. We determind if
+ * the C compiler uses two's complement to store integers by using the ~
+ * operator and then checking if the value that is return is equal to
+ * -(value+1). if this is true we return 1 and 0 if false. Then print out the
+ * corresponding output for 1 or 0 (Yes/No).
  */
 
 #include <stdio.h>
@@ -61,6 +92,7 @@ void output() {
   } else {
     tcout = "No";
   }
+  
   printf("Big endian architecture: %s\n", beout);
   printf("Size of integer in bytes: %d\n", i1size);
   printf("(Alternate method size) %d\n", i2size);
