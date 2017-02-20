@@ -1,6 +1,21 @@
+/*
+ * Names: Ian Kirkpatrick, Benjamin Groseclose, Nathan Johnson,
+ * Class: CPS 360,                            Section: Spring 2017
+ * Times: Tuesday, Thursday 9:30 - 11:00      Assignment: 03
+ * Due: February 21, 2017                      Started: February 19, 2017
+ * Credit: 10 points.
+ *
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+  Main function of program.
+  This simplly calls the output funtion and then exits with an error code of
+  0.
+*/
 int main(int argc, char *argv[]) {
   void output();
   output();
